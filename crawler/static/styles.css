@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.form input[name="url"] {
+    width: 30%;
+}
+
+.errorlist {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.list {
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.listelem {
+    list-style-position: inside;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

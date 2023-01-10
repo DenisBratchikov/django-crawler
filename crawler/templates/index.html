@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container">
+        <h1>Web-crawler</h1>
+        <form class="form" action="{% url 'crawler:index' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Go!</button>
+        </form>
+        {% if data is not None %}
+            {% if data|length  == 0 %}
+                <span>No links found!</span>
+            {% else %}
+                <ul class="list">
+                    {% for link in data %}
+                        <li class="listelem" title={{ link }}>{{ link }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock body %}
